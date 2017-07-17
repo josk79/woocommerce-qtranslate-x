@@ -99,6 +99,8 @@ function qwc_filter_postmeta($original_value, $object_id, $meta_key = '', $singl
 	//qtranxf_dbg_log_if($object_id==58,'qwc_filter_postmeta: $object_id='.$object_id.' $meta_key:',$meta_key);
 	switch($meta_key){
 		case '_product_attributes':
+		case '_stock':
+		case '_stock_status':
 			return $original_value;
 		default: return qtranxf_filter_postmeta($original_value, $object_id, $meta_key, $single);
 	}
